@@ -36,8 +36,12 @@
 
     <mappers>
         <!--如果映射配置文件与映射器接口在同一个类路径下，可以自动被解析，不需要显式地指定映射配置文件-->
-        <!--        <package name="com.abucloud.mapper"/>-->
 
-        <mapper resource="mapper/UserInfoMapper.xml"/>
+        <!--<mapper resource="mapper/UserInfoMapper.xml"/>-->
+        <!--<mapper url="file:///var/mappers/AuthorMapper.xml"/>-->
+
+        <!--下面两种  ==要求==  映射配置文件和映射器接口在同一个类路径下-->
+        <package name="com.abucloud.mapper"/>
+        <!--<mapper class="com.abucloud.mapper.UserInfoMapper"/>-->
     </mappers>
 </configuration>
