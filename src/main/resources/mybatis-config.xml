@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <!--以下子标签配置后要按照官网指定的顺序进行配置-->
+    <!--以下子标签配置后要按照官网指定的顺序进行配置，否-->
 
     <!--指定数据库连接位置-->
     <properties resource="jdbc.properties"/>
@@ -14,6 +14,8 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!--日志输出到控制台-->
         <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--自动映射（忽略大小写自动匹配列名于属性名，不包括嵌套结果的映射）-->
+        <setting name="autoMappingBehavior" value="PARTIAL"/>
     </settings>
 
     <!--起别名-->
